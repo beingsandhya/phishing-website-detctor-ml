@@ -65,7 +65,7 @@ def extract_features(url):
     return pd.DataFrame([features])
 
 
-st.sidebar.image("logo.jpeg", width=250)  
+#st.sidebar.image("logo.jpeg", width=250)  
 
 st.title(" Phishing Website Detector ")
 st.markdown("Enter a URL to check if it is phishing or safe.")
