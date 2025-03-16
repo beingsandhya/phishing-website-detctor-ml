@@ -58,7 +58,7 @@ def extract_features(url):
   
     try:
         alexa_rank = requests.get(f"https://www.alexa.com/siteinfo/{parsed_url.netloc}")
-        features["Web_Traffic"] = int(re.search(r"Global Rank: ([\d,]+)", alexa_rank.text).group(1).replace(","
+        features["Web_Traffic"] = int(re.search(r"Global Rank: ([\d,]+)", alexa_rank.text).group(1).replace(",", ""))
     except:
         features["Web_Traffic"] = 0
 
